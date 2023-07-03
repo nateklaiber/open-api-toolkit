@@ -9,6 +9,9 @@ require_relative "models/server"
 require_relative "models/server_variables"
 require_relative "models/server_variable"
 
+require_relative "models/paths"
+require_relative "models/path"
+
 module OpenApi
   module Toolkit
     module Models
