@@ -43,11 +43,14 @@ RSpec.describe(OpenApi::Toolkit::Models::Information) do
       expect(subject.contact).to be_a(OpenApi::Toolkit::Models::Contact)
     end
 
-
     it "returns the license attributes" do
       expected = {}
 
       expect(subject.license_attributes).to eq(expected)
+    end
+
+    it "returns an instance of the license object" do
+      expect(subject.license).to be_a(OpenApi::Toolkit::Models::License)
     end
 
     it "returns the logo attributes" do
