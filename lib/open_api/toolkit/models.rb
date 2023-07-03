@@ -22,6 +22,12 @@ require_relative "models/http_method"
 require_relative "models/parameter_locations"
 require_relative "models/parameter_location"
 
+require_relative "models/parameter_styles"
+require_relative "models/parameter_style"
+
+require_relative "models/parameters"
+require_relative "models/parameter"
+
 module OpenApi
   module Toolkit
     module Models

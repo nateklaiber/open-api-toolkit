@@ -44,6 +44,18 @@ module OpenApi
           self.new(self.records_attributes)
         end
 
+        # Retrieve records by ids
+        #
+        # @param ids [Array]
+        #
+        # @return [OpenApi::Toolkit::Models::ParameterLocations]
+        def self.list_by_ids(ids)
+          identifiers = Array(ids).compact.uniq
+
+          set = self.records
+          set.list_by_ids(identifiers)
+        end
+
         # Retrieve an method by name (id)
         #
         # @return [OpenApi::Toolkit::Models::ParameterLocation,NilClass]
@@ -64,6 +76,26 @@ module OpenApi
         # @return [OpenApi::Toolkit::Models::ParameterLocation,NilClass]
         def retrieve(name)
           self.find { |record| record.name.to_s == name.to_s }
+        end
+
+        # Returns the attributes for listing by ids
+        #
+        # @param ids [Array]
+        #
+        # @return [Array]
+        def list_by_ids_attributes(ids)
+          identifiers = Array(ids).compact.uniq
+
+          self.select { |r| identifiers.include?(r.name) }.map(&:to_attributes)
+        end
+
+        # Returns the matching records by ids
+        #
+        # @param ids [Array]
+        #
+        # @return [OpenApi::Toolkit::Models::ParameterLocations]
+        def list_by_ids(ids)
+          self.class.new(self.list_by_ids_attributes(ids))
         end
 
         private
