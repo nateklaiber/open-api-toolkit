@@ -37,6 +37,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency('multi_json')
   spec.add_dependency('mimemagic')
   spec.add_dependency('mime-types')
+  spec.add_dependency('uri_template')
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
