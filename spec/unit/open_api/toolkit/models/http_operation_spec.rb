@@ -43,6 +43,11 @@ RSpec.describe(OpenApi::Toolkit::Models::HttpOperation) do
       expect(subject.external_documentation_attributes).to eq(expected)
     end
 
+    it "returns the external documentation object" do
+      expect(subject.external_documentation).to be_a(OpenApi::Toolkit::Models::ExternalDocumentation)
+    end
+
+
     it "returns the parameters attributes" do
       expected = []
 

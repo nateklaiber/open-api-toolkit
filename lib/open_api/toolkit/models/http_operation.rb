@@ -69,6 +69,13 @@ module OpenApi
           Hash(@attributes.fetch(:external_documentation, {}))
         end
 
+        # Returns the externald documentation object
+        #
+        # @return [OpenApi::Toolkit::Models::ExternalDocumentation]
+        def external_documentation
+          OpenApi::Toolkit::Models::ExternalDocumentation.new(self.external_documentation_attributes)
+        end
+
         # Returns the request body attributes
         #
         # @return [Array]

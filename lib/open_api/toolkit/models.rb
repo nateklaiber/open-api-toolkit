@@ -2,6 +2,7 @@ require_relative "models/specification"
 require_relative "models/information"
 require_relative "models/contact"
 require_relative "models/license"
+require_relative "models/external_documentation"
 
 require_relative "models/servers"
 require_relative "models/server"
