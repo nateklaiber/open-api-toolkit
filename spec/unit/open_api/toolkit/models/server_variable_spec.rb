@@ -1,8 +1,10 @@
 RSpec.describe(OpenApi::Toolkit::Models::ServerVariable) do
   let(:model_attributes) do
     {
-      :name    => 'username',
-      :default => 'gob'
+      :name        => 'username',
+      :description => 'Username of the user',
+      :default     => 'gob',
+      :enum        => ['test', 'another']
     }
   end
 
@@ -11,6 +13,16 @@ RSpec.describe(OpenApi::Toolkit::Models::ServerVariable) do
   context "with valid values" do
     it "returns the name" do
       expect(subject.name).to eq('username')
+    end
+
+    it "returns the description" do
+      expect(subject.description).to eq('Username of the user')
+    end
+
+    it "returns the enum" do
+      expected = ['test', 'another']
+
+      expect(subject.enum).to eq(expected)
     end
 
     it "returns the symbolized name" do

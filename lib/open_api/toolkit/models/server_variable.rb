@@ -20,6 +20,20 @@ module OpenApi
           @attributes[:name]
         end
 
+        # Returns the description
+        #
+        # @return [String]
+        def description
+          @attributes[:description]
+        end
+
+        # Returns the enum collection of strings
+        #
+        # @return [Array<String>]
+        def enum
+          Array(@attributes.fetch(:enum, []))
+        end
+
         # Returns the symbolized key name
         #
         # @return [Symbol]
@@ -35,6 +49,9 @@ module OpenApi
           @attributes[:default]
         end
 
+        # Return the record as a template value
+        #
+        # @return [Hash]
         def as_template
           hsh = {}
           hsh[self.key_name] = self.default
