@@ -80,13 +80,6 @@ module OpenApi
           OpenApi::Toolkit::Models::License.new(self.license_attributes)
         end
 
-        # Returns the logo attributes
-        #
-        # @return [Hash]
-        def logo_attributes
-          Hash(@attributes.fetch(:logo, {}))
-        end
-
         # Returns the original attributes
         #
         # @return [Hash]
