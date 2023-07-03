@@ -59,6 +59,13 @@ module OpenApi
           Hash(@attributes.fetch(:contact, {}))
         end
 
+        # Returns an instance of the contact object
+        #
+        # @return [OpenApi::Toolkit::Models::Contact]
+        def contact
+          OpenApi::Toolkit::Models::Contact.new(self.contact_attributes)
+        end
+
         # Returns the license attributes
         #
         # @return [Hash]
