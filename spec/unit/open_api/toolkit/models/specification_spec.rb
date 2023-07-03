@@ -18,6 +18,10 @@ RSpec.describe(OpenApi::Toolkit::Models::Specification) do
       expect(subject.info_attributes).to eq(expected)
     end
 
+    it "returns an instance of the information model" do
+      expect(subject.information).to be_a(OpenApi::Toolkit::Models::Information)
+    end
+
     it "returns the servers attributes" do
       expected = []
 

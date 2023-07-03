@@ -26,6 +26,14 @@ module OpenApi
         end
         alias information_attributes info_attributes
 
+        # Returns the Information object
+        #
+        # @return [OpenApi::Toolkit::Models::Information]
+        def info
+          OpenApi::Toolkit::Models::Information.new(self.info_attributes)
+        end
+        alias information info
+
         # Returns the servers attributes
         #
         # @return [Array]
