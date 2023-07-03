@@ -12,6 +12,12 @@ require_relative "models/server_variable"
 require_relative "models/paths"
 require_relative "models/path"
 
+require_relative "models/http_operations"
+require_relative "models/http_operation"
+
+require_relative "models/http_methods"
+require_relative "models/http_method"
+
 module OpenApi
   module Toolkit
     module Models

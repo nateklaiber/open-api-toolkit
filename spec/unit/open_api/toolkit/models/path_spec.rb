@@ -1,7 +1,9 @@
 RSpec.describe(OpenApi::Toolkit::Models::Path) do
   let(:model_attributes) do
     {
-      :path => '/resource-name',
+      :path        => '/resource-name',
+      :summary     => 'Main Resource',
+      :description => 'Working with the main resource'
     }
   end
 

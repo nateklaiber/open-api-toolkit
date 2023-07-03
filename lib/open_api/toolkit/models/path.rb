@@ -13,6 +13,20 @@ module OpenApi
           @attributes = Hash(attributes)
         end
 
+        # Returns the summary of the path
+        #
+        # @return [String]
+        def summary
+          @attributes[:summary]
+        end
+
+        # Returns the description of the path
+        #
+        # @return [String]
+        def description
+          @attributes[:description]
+        end
+
         # Returns the path
         #
         # @return [String]
