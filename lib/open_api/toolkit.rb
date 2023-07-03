@@ -2,9 +2,9 @@
 
 require_relative "toolkit/version"
 
+require_relative "toolkit/models"
+
 module OpenApi
   module Toolkit
-    class Error < StandardError; end
-    # Your code goes here...
   end
 end
